@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genrate your lucky letter from your name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cl">
+        <div class="box">
+            <h2 class="heading">
+                Click to genrate your <br />
+                lucky letter
+            </h2>
+            <input type="text" id="cm-val" placeholder="your nice name..... ">
+            <div class="but">
+                <button type="submit" onclick="convert()">convert to inches</button>
+            </div>
+            <div id="resulte">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let resulte = document.getElementById("resulte");
+        function convert(){
+            let name = document.getElementById("cm-val").value;
+            let randomindex = Math.floor(Math.random() * name.length);
+            let randomletter = name[randomindex];
+            // console.log(randomletter)
+            resulte.innerHTML = randomletter
+            document.getElementById("cm-val").value = "" ;
+        }
+
+    </script>
+</body>
+</html>
